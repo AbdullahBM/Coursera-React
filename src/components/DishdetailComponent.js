@@ -19,6 +19,7 @@ function RenderComments({ dish }) {
   if (dish != null) {
     return dish.comments.map(comment => {
       return (
+        <h4 className="text-center">Comments</h4>
         <ul>
           <li>
             {comment.author} ...
@@ -43,7 +44,6 @@ const Dishdetail = props => {
           <RenderDish dish={props.dish} />
         </div>
         <div className="col-12 col-md-5 m-1">
-          <h4 className="text-center">Comments</h4>
           <RenderComments dish={props.dish} />
         </div>
       </div>
