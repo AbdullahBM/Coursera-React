@@ -19,18 +19,20 @@ function RenderComments({ dish }) {
   if (dish != null) {
     return dish.comments.map(comment => {
       return (
-        <h4 className="text-center">Comments</h4>
-        <ul>
-          <li>
-            {comment.author} ...
-            {new Intl.DateTimeFormat("en-US", {
-              year: "numeric",
-              month: "short",
-              day: "2-digit"
-            }).format(new Date(Date.parse(comment.date)))}
-          </li>
-          <li>{comment.comment}</li>
-        </ul>
+        <div>
+          <h4 className="text-center">Comments</h4>
+          <ul>
+            <li>
+              {comment.author} ...
+              {new Intl.DateTimeFormat("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "2-digit"
+              }).format(new Date(Date.parse(comment.date)))}
+            </li>
+            <li>{comment.comment}</li>
+          </ul>
+        </div>
       );
     });
   } else return <div />;
