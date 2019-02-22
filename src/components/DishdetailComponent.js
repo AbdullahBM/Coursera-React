@@ -8,6 +8,7 @@ import {
   Breadcrumb,
   BreadcrumbItem
 } from "reactstrap";
+import CommentForm from "./CommentForm";
 import { Link } from "react-router-dom";
 
 function RenderDish({ dish }) {
@@ -66,6 +67,7 @@ const Dishdetail = props => {
         <div className="col-12 col-md-5 m-1">
           <h4 className="text-center">Comments</h4>
           <RenderComments comments={props.comments} />
+          <CommentForm />
         </div>
       </div>
     </div>
